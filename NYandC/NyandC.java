@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class NyandC {
 
@@ -16,7 +17,7 @@ public class NyandC {
 		driver.get("https://www.nyandcompany.com");
 driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 String hphandle= driver.getWindowHandle();
-//code to check if the nyandcompany page title is loading upon clicking the website url
+                   //code to check if the nyandcompany page title is loading upon clicking the website url
 String expPtitle= "Women's Clothes & Accessories | Shop at New York & Company";
 String actPtitle= driver.getTitle();
 if (actPtitle.contentEquals(expPtitle))
@@ -27,7 +28,7 @@ if (actPtitle.contentEquals(expPtitle))
 else {System.out.println("Pagetitle test failed");	
       System.out.println(actPtitle);
 	}
-//create a new account for a user to login
+                  //create a new account for a user to login
 WebElement createaccount= driver.findElement(By.xpath("/html/body/header/nav[2]/ul/ul/li[1]/div[2]/a[2]"));
 createaccount.click();
 WebElement email= driver.findElement(By.id("email")).sendkeys("xyz@gmail.com");	
@@ -47,8 +48,13 @@ WebElement state= driver.findElement(By.id("atg_store_stateSelect"));
 Select s2 = new Select(state);
 s2.SelectByValue("TX");
 WebElement zipcode= driver.findElement(By.id("zip")).sendKeys("75035");		
-WebElement register= driver.findElement(By.id("atg_store_createMyAccount")).click();		
-//to check if menu option evamendes is displayed and goes to expected page upon click
+WebElement register= driver.findElement(By.id("atg_store_createMyAccount")).click();	
+		//login by user
+WebElement login = driver.findElement(By.xpath("/html/body/header/nav[2]/ul/ul/li[1]/div[2]/a[1]")).click();
+WebElement email = driver.findElement(By.id("atg_store_registerLoginEmailAddress")).sendKeys("xyz@gmail.com");
+WebElement password = driver.findElement(By.id("atg_store_registerLoginPassword").sendKeys("abcde1");		
+
+		//to check if menu option evamendes is displayed and goes to expected page upon click
 WebElement evamendes= driver.findElement(By.xpath("/html/body/header/nav[1]/div[3]/div/ul[1]/li/a"));
 if(evamendes.isDisplayed())
 {evamendes.click();
