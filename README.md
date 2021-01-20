@@ -7,16 +7,20 @@ A. User should be able to open the application NYandC upon entering the website 
 
 B. Upon opening the application, it should land on the appropriate home page.
 
-C. User should be able to view and navigate through different menu options like EvaMendes, Gabrielle Union, BrandsWeLove.  Appropriate feature page should be loaded upon click.
+C. A new User should be able to register and create a login account.
 
-D. User should be able to navigate through sub-menu(menu- dropdown) options and desired sub-menu option page should be loaded.
+D. Login feature button should be properly aligned to the left as per the requirement.
 
-E. Login feature button should be properly aligned to the left as per the requirement.
+E. Registered user should be able to login to the application.
 
-F. Font size of the menu option "MyWishList" should be as per the requirement.
+F. User should be able to view and navigate through different menu options like EvaMendes, Gabrielle Union, BrandsWeLove.  Appropriate feature page should be loaded upon click.
 
-G. Footer text is displayed.
+G. User should be able to navigate through sub-menu(menu- dropdown) options and desired sub-menu option page should be loaded.
 
-H. User should be able to go back to the home page anytime while navigating different menu options.
+H. Font size of the menu option "MyWishList" should be as per the requirement.
 
-I. User should be able to exit the application.
+I. Footer text is displayed.
+
+J. User should be able to go back to the home page anytime while navigating different menu options.
+
+K. User should be able to logout and exit the application.
