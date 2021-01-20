@@ -52,8 +52,8 @@ WebElement register= driver.findElement(By.id("atg_store_createMyAccount")).clic
 		//login by user
 WebElement login = driver.findElement(By.xpath("/html/body/header/nav[2]/ul/ul/li[1]/div[2]/a[1]")).click();
 WebElement email = driver.findElement(By.id("atg_store_registerLoginEmailAddress")).sendKeys("xyz@gmail.com");
-WebElement password = driver.findElement(By.id("atg_store_registerLoginPassword").sendKeys("abcde1");		
-
+WebElement password = driver.findElement(By.id("atg_store_registerLoginPassword").sendKeys("abcde1");	
+WebElement loginbutton= driver.findElement(By.id("atg_store_loginButton")).click();					 
 		//to check if menu option evamendes is displayed and goes to expected page upon click
 WebElement evamendes= driver.findElement(By.xpath("/html/body/header/nav[1]/div[3]/div/ul[1]/li/a"));
 if(evamendes.isDisplayed())
@@ -143,9 +143,14 @@ if(footertext.isDisplayed())
 {System.out.println("footer text is displayed: If you are using a screen reader...");}
 else {System.out.println("footer text is not displayed");}
 
-//to go back to the homepage and exit the application.
+//to go back to the homepage and logout from the application.
 
 driver.switchTo().window(hphandle);
-driver.quit();	
+WebElement Hello_user= driver.findElement(By.xpath("//a[@class='header_firstName']"));
+if(Hello_user.isdisplayed())
+	{
+	WebElement logout= driver.findElement(By.id("atg_store_logOutButton")).click();
+	}	
+ driver.quit();	
 	}	
 }
