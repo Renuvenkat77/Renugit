@@ -38,6 +38,16 @@ WebElement lastname= driver.findElement(By.id("lname")).sendkeys("David");
 WebElement mobile = driver.findElement(By.id("mobilenumask")).sendkeys("4693221402");	
 WebElement phone_num= driver.findElement(By.id("phonenumask")).sendkeys("2144444444");	
 WebElement country= driver.findElement(By.id("atg_store_countryNameSelect"));		
+Select s1= new Select(country);
+s1.SelectByValue("US");
+WebElement nickname_address= driver.findElement(By.id("addressname")).sendKeys("abc");
+WebElement address1= driver.findElement(By.id("address1")).sendKeys("23, Serene Dr");
+WebElement city= driver.findElement(By.id("city")).sendKeys("Dallas");		
+WebElement state= driver.findElement(By.id("atg_store_stateSelect"));
+Select s2 = new Select(state);
+s2.SelectByValue("TX");
+WebElement zipcode= driver.findElement(By.id("zip")).sendKeys("75035");		
+WebElement register= driver.findElement(By.id("atg_store_createMyAccount")).click();		
 //to check if menu option evamendes is displayed and goes to expected page upon click
 WebElement evamendes= driver.findElement(By.xpath("/html/body/header/nav[1]/div[3]/div/ul[1]/li/a"));
 if(evamendes.isDisplayed())
