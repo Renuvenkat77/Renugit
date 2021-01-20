@@ -27,6 +27,17 @@ if (actPtitle.contentEquals(expPtitle))
 else {System.out.println("Pagetitle test failed");	
       System.out.println(actPtitle);
 	}
+//create a new account for a user to login
+WebElement createaccount= driver.findElement(By.xpath("/html/body/header/nav[2]/ul/ul/li[1]/div[2]/a[2]"));
+createaccount.click();
+WebElement email= driver.findElement(By.id("email")).sendkeys("xyz@gmail.com");	
+WebElement password= driver.findElement(By.id("password1")).sendkeys("abcde1");	
+WebElement confirm_pwd = driver.findElement(By.id("password2")).sendkeys("abcde1");	
+WebElement firstname = driver.findElement(By.id("fname")).sendkeys("John");	
+WebElement lastname= driver.findElement(By.id("lname")).sendkeys("David");	
+WebElement mobile = driver.findElement(By.id("mobilenumask")).sendkeys("4693221402");	
+WebElement phone_num= driver.findElement(By.id("phonenumask")).sendkeys("2144444444");	
+WebElement country= driver.findElement(By.id("atg_store_countryNameSelect"));		
 //to check if menu option evamendes is displayed and goes to expected page upon click
 WebElement evamendes= driver.findElement(By.xpath("/html/body/header/nav[1]/div[3]/div/ul[1]/li/a"));
 if(evamendes.isDisplayed())
